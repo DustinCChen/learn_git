@@ -50,4 +50,13 @@ git init git_demo
 git config --local user.name 'dust.chen'
 git config --local user.email 'dust.chen@outlook.com'
 git add .
+git commit -m "update README.md"
+```
+
+
+```mermaid
+graph TD;
+  A[工作目录] --> B{暂存区}
+  B -->C[版本历史]
+  E --> F[End]
 ```
