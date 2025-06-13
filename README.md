@@ -51,12 +51,15 @@ git config --local user.name 'dust.chen'
 git config --local user.email 'dust.chen@outlook.com'
 git add .
 git commit -m "update README.md"
+git add -u ##  add update
 ```
 
 
 ```mermaid
 graph TD;
-  A[工作目录] --> B{暂存区}
-  B -->C[版本历史]
-  E --> F[End]
+  style A fill:	#98FB98,stroke:#333,stroke-width:4px
+  A[工作目录] -- git add files ---> B[暂存区];
+  style B fill:#00BFFF,stroke:#333,stroke-width:4px
+  B -- git commit --->C[版本历史]
+  style C fill:#F0E68C,stroke:#333,stroke-width:4px
 ```
