@@ -52,6 +52,12 @@ git config --local user.email 'dust.chen@outlook.com'
 git add .
 git commit -m "update README.md"
 git add -u ##  add update
+git mv Mermaid.md  mermaid.md
+git reset --soft HEAD^ ##  reset,one commit
+touch README2.md
+git add README2.md
+git commit -m "add README2.md"
+git rm README2.md ##  remove
 ```
 
 
