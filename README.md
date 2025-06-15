@@ -76,6 +76,37 @@ git commit -am "update README2.md"
 git branch -av
 git log --all --graph
 gitk # GitK,图形化界面
+git stash # 暂存
+ls -al
+cd .git 
+cat HEAD
+cat refs/heads/main
+cd ..
+git checkout temp
+cat .git/HEAD # 查看当前分支
+cat .git/config
+git config --local --list
+ls -al .git/refs/ # tags对应里程碑,heads对应分支,remotes对应远程分支,stash对应暂存区
+ls -al .git/refs/heads/ # 列出所有分支
+cat .git/refs/heads/temp
+git cat-file -t e7a42584e024a86 # 查看对象类型
+git branch -av # 查看所有分支，列表所有分支
+ls -al .git/refs/tags/ # 列出所有tag
+cat .git/refs/tags/readme
+git cat-file -t ff191b188fbf7
+git cat-file -p ff191b188fbf7
+ls -al .git/objects/ # git核心内容
+cd .git/objects/ed/ 
+git cat-file -t  ed01860036a14a25c9b ## 前面的ed 是文件名,必不可少
+git cat-file -p  ed01860036a14a25c9b ## 前面的ed 是文件名,必不可少
+# git 核心对象：tree,blob,commit,tag
+# 一个commit对象包含：tree,parent,author,committer,message,
+# 一个tag对象包含：object,type,tag,tagger,message
+# 一个blob对象包含：content
+# 一个commit对应一棵树
+git cat-file -p 5bbe77c7bb70ee
+git cat-file -p 2bde4168ab55ffe
+git cat-file -p d01f779ffe857c35
 ```
 ## resources
 * https://www.atlassian.com/git/tutorials/gitk # GitK，图形化界面
