@@ -58,6 +58,23 @@ touch README2.md
 git add README2.md
 git commit -m "add README2.md"
 git rm README2.md ##  remove
+touch README3 
+git add README3
+git commit -m "add README3"
+git log 
+#  变更文件名称，直接使用git mv
+git mv README3 README3.md
+git status ## renamed:    README2 -> README2.md
+git log -n4 # 查看最近4个提交记录
+git log --graph # 绘制图
+git branch -v # 查看分支
+git log --oneline --graph # 绘制图
+git log --oneline #  view a concise log of commits in Git
+git checkout -b temp ed01860 # 创建临时分支
+vim README2.md
+git commit -m "update README2.md"
+git branch -av
+
 ```
 
 
