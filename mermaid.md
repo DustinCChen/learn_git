@@ -381,3 +381,38 @@
         　　　Create tests for renderer　　　　　　:2d
         　　　Add to ,mermaid　　　　　　　　　　　:1d
 ```
+
+```mermaid
+graph TD;
+  style A fill:	#98FB98,stroke:#333,stroke-width:4px
+  A[工作目录] -- git add files ---> B[暂存区];
+  style B fill:#00BFFF,stroke:#333,stroke-width:4px
+  B -- git commit --->C[版本历史]
+  style C fill:#F0E68C,stroke:#333,stroke-width:4px
+```
+```mermaid
+gantt
+dateFormat YYYY-MM-DD
+title Yr2023WK20     WorkSchedule-GanttDiagram
+excludes 2023-05-27,2023-05-28,2023-05-20,2023-05-21
+section Dev
+
+1.1 驾驶舱项目二期开发:activate,2023-05-19,6d
+1.1.1 行业大盘逻辑梳理:done,2023-05-22,2d
+1.1.2 京东行业关键词:active,2023-05-24,2d
+1.1.3 天猫行业关键词:active,2023-05-24,2d
+
+1.2 产品线中心爬虫支持:activate,2023-05-19,6d
+1.2.1 竞品评论文本抓取:done,2023-05-19,2d
+1.2.2 竞品评论图片抓取:active,2023-05-24,2d
+1.2.3 竞品评论视频抓取:active,2023-05-24,2d
+
+
+section Ops
+2.1 京东自营数据维护:done,2023-05-19,6d
+2.1.1 降压线数据补充:done,2023-05-22,2d
+2.2 天猫官旗数据维护:done,2023-05-19,6d
+2.2.1 6Pro补充:done,2023-05-23,4d
+2.2.2 创意维护更新:done,2023-05-23,4d
+2.3 天猫车旗数据维护:done,2023-05-19,6d
+```
