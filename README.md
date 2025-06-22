@@ -18,7 +18,7 @@ touch index.html
 git add .
 git status
 git commit -m "create learn_git.html"
-git status
+git status # 红色的是未暂存的（位于工作区），绿色的是未提交的（位于stage暂存区）
 git log
 git restore --staged learn_git.html
 git commit -m "add index.html"
