@@ -111,6 +111,11 @@ git cat-file -p 5bbe77c7bb70ee
 git cat-file -p 2bde4168ab55ffe
 git cat-file -p d01f779ffe857c35
 ```
+
+## 之前被暂存区跟踪过，gitignore是后加的，忽略规则无效
+```bash
+git rm -r --cached ## 清除暂存区所有跟踪记录，重新暂存提交
+```
 ## resources
 * https://www.atlassian.com/git/tutorials/gitk # GitK，图形化界面
 
