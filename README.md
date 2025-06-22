@@ -18,7 +18,7 @@ touch index.html
 git add .
 git status
 git commit -m "create learn_git.html"
-git status # 红色的是未暂存的（位于工作区），绿色的是未提交的（位于stage暂存区）
+git status # 红色的是未暂存的（位于工作区），绿色的是未提交的（位于stage暂存区，还没有提交到版本库）
 git log
 git restore --staged learn_git.html
 git commit -m "add index.html"
@@ -53,7 +53,10 @@ git add .
 git commit -m "update README.md"
 git add -u ##  add update
 git mv Mermaid.md  mermaid.md
-git reset --soft HEAD^ ##  reset,one commit
+git reset --soft HEAD^ ##  reset,one commit,HEAD是头指针,指向标记现在工作区所在的记录,只移动HEAD指针，暂存区和工作目录中的更改都会保留在工作目录中，以便再次提交。
+git reset --hard  [版本号] ## 回退命令,移动 HEAD 指针并重置索引和工作区，彻底删除了提交以及暂存区和工作区的修改，慎用，因为会导致工作区的内容丢失。
+git reset --mixed [版本号]# mixed或不带选项（默认）：移动 HEAD 指针并重置索引，不会修改工作区，撤销了提交和暂存的更改，但保留了工作区的修改。
+git reflog ## 查看git所有的日志操作记录,是后悔药,git reset 回退会影响工作区,
 touch README2.md
 git add README2.md
 git commit -m "add README2.md"
